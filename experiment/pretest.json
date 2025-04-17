@@ -9,7 +9,7 @@
         "c": "25",
         "d": "32"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
@@ -20,7 +20,7 @@
         "c": "No, PCR cannot copy DNA, only RNA",
         "d": "No, PCR copies short pieces of DNA only."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
@@ -29,7 +29,7 @@
         "a": "True",
         "b": "False"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
