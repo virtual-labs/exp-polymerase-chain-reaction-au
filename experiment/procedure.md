@@ -38,13 +38,13 @@ Template DNA.
 
 Dissolve template DNA in 10 mM Tris-Cl (pH 7.6) containing a low concentration of EDTA (<0.1 mM) at the following concentrations:
 
-    Mammalian genomic DNA: 100 µg/mL
+ Mammalian genomic DNA: 100 µg/mL
     
-    Yeast genomic DNA: 1 µg/mL
+ Yeast genomic DNA: 1 µg/mL
     
-    Bacterial genomic DNA: 0.1 µg/mL
+ Bacterial genomic DNA: 0.1 µg/mL
     
-    Plasmid DNA: 1–5 ng/mL
+ Plasmid DNA: 1–5 ng/mL
 
 #### Method
 
@@ -62,17 +62,17 @@ In a sterile 0.5 mL microfuge tube, mix in the following order:
 
 The values provided are standard reaction conditions for PCR:
 
-      Mg²⁺: 1.5 mM
+  Mg²⁺: 1.5 mM
       
-      KCl: 50 mM
+  KCl: 50 mM
       
-      dNTPs: 200 µM
+  dNTPs: 200 µM
       
-      Primers: 1 µM each
+  Primers: 1 µM each
       
-      DNA polymerase: 1–5 units
+  DNA polymerase: 1–5 units
       
-      Template DNA: 1 pg to 1 µg
+  Template DNA: 1 pg to 1 µg
 
 The amount of template DNA required varies according to the complexity of its sequence.
 
