@@ -1,1 +1,1 @@
-## Experiment name
+## Polymerase Chain Reaction (PCR)
