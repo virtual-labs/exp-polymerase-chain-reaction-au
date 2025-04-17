@@ -2,35 +2,53 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The number of amplified pieces of DNA equals -------- after five cycles of PCR",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "5",
+        "b": "10",
+        "c": "25",
+        "d": "32"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Is it possible to use PCR to produce many copies of all DNA of one chromosome ?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "yes, if the correct primers are available",
+        "b": "yes,if the telomeres are present",
+        "c": "No, PCR cannot copy DNA, only RNA",
+        "d": "No, PCR copies short pieces of DNA only."
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "PCR requires knowledge about parts of a target DNA sequence to be amplified. True or False?",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is an advantage of single - primer PCR?",
+      "answers": {
+        "a": "Less synthetic DNA is incorporated into the product",
+        "b": "Unknown sequence adjacent to a known sequence can be amplified with a single primer",
+        "c": "No Primer-dimer artifacts"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which end of a PCR primer can be extended by polymerase?",
+      "answers": {
+        "a": "The 1'end",
+        "b": "The 2'end",
+        "c": "The 3'end",
+        "d": "The 4'end"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
