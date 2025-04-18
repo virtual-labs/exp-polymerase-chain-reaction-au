@@ -1,0 +1,45 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "which nuclease activity does Taq polymerase NOT have?",
+      "answers": {
+        "a": "5' to 3'",
+        "b": "3' to 5'"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following significantly inhibits PCR?",
+      "answers": {
+        "a": "12% PCR",
+        "b": "Wooden toothpicks made of birch",
+        "c": "0.2mM cresol red"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the minimum time required for denaturation in rapid- cycle PCR ?",
+      "answers": {
+        "a": "One minute",
+        "b": "30 seconds",
+        "c": "Less than one second"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is PCR good for ?",
+      "answers": {
+        "a": "To check expression of a gene",
+        "b": "To see if your gene is damaged",
+        "c": "To make a few copies of your gene",
+        "d": "To make a huge number of copies of a gene"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
