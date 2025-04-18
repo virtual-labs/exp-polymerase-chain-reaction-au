@@ -1,0 +1,119 @@
+/**	 
+* @author:anisha
+* @filename:experiment.css
+* @created 14-11-2016 11:00:50 AM
+*/
+
+
+chart {
+  display: block;
+  width: 400px;
+  height: 200px;
+}
+
+#wells {
+  width: 100%;
+}
+
+#incubate {
+  white-space: inherit;
+  line-height: 25px;
+}
+
+#graphDiv {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  opacity: 0.7;
+  height: 87.2%;
+  width: 91.7%;
+}
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+  #graphDiv {
+    width: 84%;
+    height: 80%;
+  }
+}
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 412px) 
+  and (device-height: 732px) , screen and (device-width: 414px) and (device-height: 736px) {
+  #graphDiv {
+    width: 84%;
+    height: 74%;
+  }
+}
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 384px) 
+  and (device-height: 640px) {
+  #graphDiv {
+    width: 83%;
+    height: 72%;
+  }
+}
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+  #graphDiv {
+    width: 82%;
+    height: 71%;
+  }
+}
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 533px), screen and  (device-height: 480px), screen and  (device-height: 568px) {
+  #graphDiv {
+    width: 80%;
+    height: 68%;
+  }
+}
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 375px) 
+  and (device-height: 667px) {
+  #graphDiv {
+    width: 83%;
+    height: 72%;
+  }
+}
+
+@media screen and (device-height: 960px) , screen and (device-height: 1024px) and (device-width: 600px) {
+  #graphDiv {
+    width: 89%;
+    height: 83%;
+  }
+}
+/* Portrait */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: portrait) {
+  #graphDiv {
+    width: 84%;
+    height: 80%;
+  }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: landscape) {
+  #graphDiv {
+    width: 84%;
+    height: 80%;
+  }
+}
