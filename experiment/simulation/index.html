@@ -1,13 +1,112 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<!--**	 
+* @author:anisha
+* @filename:index.html
+* @created 14-11-2016 11:00:50 AM
+*-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel='stylesheet' href='../template/assets/css/fonts.googleapis.css'>
+            <link rel="stylesheet" href="../template/bower_components/angular-material/angular-material.css"/>
+            <link rel="stylesheet" href="../template/assets/css/app.css"/>
+            <link rel="stylesheet" href="css/experiment.css"/>
+            <script src="../template/js/createjs-2015.05.21.min.js"></script>
+            <script src="../template/js/easeljs-0.7.0.min.js"></script>
+            <script src="../template/bower_components/angular/angular.min.js"></script>
+            <script src="../template/bower_components/angular-animate/angular-animate.js"></script>
+            <script src="../template/bower_components/angular-aria/angular-aria.js"></script>
+            <script src="../template/bower_components/angular-fullscreen/angular-fullscreen.js"></script>
+            <script src="../template/js/Gettext.js"></script>
+            <script type="text/javascript" src="../template/bower_components/angular-material/angular-material.js"></script>
+            <script src="../template/js/getlanguage.js"></script>
+            <script src="../template/js/canvasjs.min.js"></script>
+            <script src="./src/user_controller.js"></script>
+            <script src="./src/view.js"></script>
+            <script src="./src/experiment.js"></script>
+            <script type="text/javascript">
+        angular
+        .module('starterApp', ['ngMaterial','users'])
+        .config(function($mdThemingProvider, $mdIconProvider){
+            $mdIconProvider
+                .icon("menu"       , "../template/assets/svg/menu.svg"        , 24)
+                .icon("fullscreen"       , "../template/assets/icons/Icon3.svg", 24)
+                .icon("help"      , "../template/assets/icons/Icon2.svg", 24);
+                $mdThemingProvider.theme('default')
+                    .primaryPalette('blue')
+                    .accentPalette('red');
+        });
+    </script>
+          </head>
+          <body style="background-color: #f2f2f2;" ng-app="starterApp" ng-controller="UserController as ul">
+            <md-toolbar class="md-toolbar-tools" id="main">
+              <md-button class="md-icon-button" hide-gt-md ng-click="ul.toggleList()" aria-label="Show User List">
+                <md-icon md-svg-icon="menu" ></md-icon>
+              </md-button>
+              <!-- //Experiment title gives here//   -->
+              <h1 flex="" layout="row" class="expTitle" id="expTitle">{{heading}}</h1>
+              <md-button class="md-icon-button" aria-label="help" ng-click="showActionToast()">
+                <md-icon md-svg-icon="help"></md-icon>
+              </md-button>
+              <md-button class="md-icon-button" aria-label="fullscreen" ng-click="goFullscreen()">
+                <md-icon md-svg-icon="fullscreen"></md-icon>
+              </md-button>
+            </md-toolbar>
+            <md-content flex layout="row" style="background-color: #f2f2f2;">
+              <md-content  id="content" layout="column"  style="background-color: #f2f2f2;" md-swipe-right="toggleSidenav()">
+                <canvas id="demoCanvas" width="700" height="700" align="center" layout-fill experiment></canvas>
+                <md-content id="graphDiv" layout-xs ng-hide="divshow" class="md-default-theme" aria-hidden="false" style=""></md-content>
+                <div id="Copyright">{{copyright}}</div>
+              </md-content>
+              <md-sidenav class="site-sidenav md-sidenav-left" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')" md-swipe-left="toggleSidenav()">
+                <div>
+                  <md-button id="variables" class="md-raised md-primary toolbarbutton subTitle" ng-click="toggle1()">{{variables}} 
+                    <span aria-hidden="true">
+                      <md-icon md-svg-src="md-toggle-arrow"  aria-hidden="true" ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[isActive1]" ></md-icon>
+                    </span>
+                  </md-button>
+                  <div ng-hide="showVariables" class="div">
+                    <!-- Insert slider1 label -->
+                    <md-content class="md-title selectable" ng-model="Copynumber" layout-padding id="Copynumber">{{initial_copy_number}} : {{copy_num}}</md-content>
+                    <!-- Insert slider1 -->
+                    <div layout>
+                      <md-slider flex md-discrete ng-disabled="voltage_disable" ng-change="changeCopynumber()" ng-model="Copynumber" step="1" min="0" max="100" aria-label="rating"></md-slider>
+                    </div>
+                    <!-- Insert slider2 label -->
+                    <md-content class="md-title selectable" ng-model="cyclenumber" layout-padding id="CycleNumber">{{cycle_num_label}} : {{cycle_number}}</md-content>
+                    <!-- Insert slider2 -->
+                    <div layout>
+                      <md-slider flex md-discrete ng-disabled="voltage_disable" ng-change="changeCycleNumber()" ng-model="cyclenumber" step="1" value="17.50" min="0" max="35" aria-label="rating"></md-slider>
+                    </div>
+                    <!-- Insert slider3 label -->
+                    <md-content class="md-title md-discrete" ng-model="amplificationEff" layout-padding id="amplificationEff">{{amplification_efficiency}} : {{amp_eff}}</md-content>
+                    <!-- Insert slider3 -->
+                    <div layout>
+                      <md-slider flex md-discrete ng-disabled="voltage_disable" ng-change="changeAmplification()" ng-model="amplificationEff" step="10" min="0" max="100" aria-label="rating"></md-slider>
+                    </div>
+                    <!-- // Inset button1 //   -->
+                    <section layout="row" layout-align="center center">
+                      <md-button class="md-raised" id="efficiencyEffect" ng-click="startPlotting();" style="white-space: inherit;line-height: 25px;">{{efct_effi_ampli_graph}}</md-button>
+                    </section>
+                    <!-- // Inset button2 //   -->
+                    <section layout="row" layout-align="center center">
+                      <md-button  class="md-raised" id="resetBtn" ng-click="resetExp();">{{Reset}}</md-button>
+                    </section>
+                  </div>
+                  <md-button id="result" class="md-raised md-primary toolbarbutton subTitle" ng-click="toggle()">{{result}}
+                    <span aria-hidden="true">
+                      <md-icon md-svg-src="md-toggle-arrow"   aria-hidden="true" ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[isActive]" ></md-icon>
+                    </span>
+                  </md-button>
+                  <!-- //inset result label //   -->
+                  <div ng-hide="showValue" class="div"></div>
+                </md-sidenav>
+              </md-content>
+            </body>
+            <script src="../template/js/loading.js"></script>
+          </html>
